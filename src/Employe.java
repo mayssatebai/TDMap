@@ -1,4 +1,4 @@
-public class Employe {
+public class Employe implements Comparable<Employe> {
     private int cin;
     private String nom;
     private int matricule;
@@ -55,4 +55,9 @@ public class Employe {
         Employe e= (Employe) o;
         if(e.matricule==this.matricule&&(e.nom.equals(this.nom))) return true; return false;
     }
+public int compareTo(Employe other) {
+        // Implement comparison logic here. For example, if Employee has a field 'name':
+        return this.nom.compareTo(other.nom);
+        }
 }
+

@@ -5,10 +5,7 @@ import java.util.TreeMap;
 public class SocieteTreeMap implements InterfaceSociete{
 
     TreeMap<Employe,Departement> employeDepartementMap=new TreeMap<>();
-    public SocieteTreeMap() {
-        // Utilisation d'un TreeMap avec un comparateur basé sur le numéro de CIN de l'employé
-        this.employeDepartementMap = new TreeMap<>(Comparator.comparing(Employe::getCin));
-    }
+
     public void ajouterEmployeDepartement(Employe e, Departement d) {
         employeDepartementMap.put(e, d);
     }
